@@ -1,6 +1,6 @@
 <p align="center"><img src="Assets/example.jpg" alt="Viewers type !suggestion in Twitch, YouTube and Kick chat; each suggestion appears as an embed in a Discord channel, with the viewer's name, platform and time" width="800"></p>
 
-<p align="center"><b>SuTo — Suggestions To ...</b><br>Gather suggestions from your Twitch, YouTube or Kick chat in your Discord, Stoat or GameVox server. A Streamer.bot import.</p>
+<p align="center"><b>SuTo — Suggestions To ...</b><br>Gather suggestions from your Twitch, YouTube or Kick chat in your Discord, Stoat or GameVox server for Streamer.bot.</p>
 
 <p align="center">
   <img alt="Supported platforms: Twitch, YouTube, Kick" src="https://img.shields.io/badge/supported_platform-Twitch%2C_YouTube%2C_Kick-white">
