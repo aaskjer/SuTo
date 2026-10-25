@@ -14,7 +14,7 @@
   <img alt="GitHub stars" src="https://img.shields.io/github/stars/aaskjer/SuTo">
 </p>
 
-**[Manual](Manual.md)** · **[Import string](Import-String.md)** · **[Download](https://github.com/aaskjer/SuTo/releases/latest)** · **[Report a problem](https://github.com/aaskjer/SuTo/issues)**
+<p align="center"><b><a href="Manual.md">Manual</a></b> · <b><a href="Import-String.md">Import string</a></b> · <b><a href="https://github.com/aaskjer/SuTo/releases/latest">Download</a></b> · <b><a href="https://github.com/aaskjer/SuTo/issues">Report a problem</a></b></p>
 
 ---
 
