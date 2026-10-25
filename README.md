@@ -35,24 +35,39 @@ A viewer types `!suggestion Play the new farming game on Sunday` in chat. A mome
 
 # Install
 
-1. Download **`SuggestionsTo.sb`** from the [latest release](https://github.com/aaskjer/SuTo/releases/latest), or copy the string from [Import-String.md](Import-String.md).
-2. In Streamer.bot (1.0 or newer) click **Import** and drag the file in, or paste the string. Confirm the prompts.
-3. Under **Settings → Commands**, group **[SuTo] Suggestions To**, enable the command for each server you post to:
+### 1. Import
 
-   | Command | Posts to |
-   |---|---|
-   | `[SuTo] Suggestion to Discord` | Discord |
-   | `[SuTo] Suggestion to Stoat` | Stoat |
-   | `[SuTo] Suggestion to GameVox` | GameVox |
+Download **`SuggestionsTo.sb`** from the [latest release](https://github.com/aaskjer/SuTo/releases/latest), or copy the string from [Import-String.md](Import-String.md). In Streamer.bot (1.0 or newer) click **Import** and drag the file in, or paste the string. The window lists the three actions; click **Import** and answer **Yes** to the question about C# code.
 
-   All three answer to `!suggestion` and `!vorschlag`. With more than one enabled, a suggestion goes to every server, and the chat confirmation comes once per server.
-4. Open the action (**[SuTo] ... Discord**, **... Stoat** or **... GameVox**) and replace the placeholder in the **Webhook: Send to Channel** group with your webhook URL:
+<p align="center"><img src="Assets/sb-import.png" alt="Streamer.bot's Import window with the SuTo string pasted in: the actions [SuTo] ... Discord, GameVox and Stoat, and the note that the import contains C# code" width="640"></p>
 
-   | Server | Argument | Where the URL comes from |
-   |---|---|---|
-   | Discord | `discordWebhookUrl` | Channel settings → Integrations → Webhooks → New Webhook → Copy Webhook URL |
-   | Stoat | `stoatSuggestionWebhook` | The channel's webhook settings; the URL looks like `https://api.stoat.chat/webhooks/{id}/{token}` |
-   | GameVox | `gameVoxWebhookUrl` | [GameVox Developer Portal](https://developers.gamevox.com/docs/webhooks) → your application → Webhooks → New Webhook. The URL is shown only once. |
+### 2. Enable the commands
+
+Open **Commands** in Streamer.bot's menu on the left. The group **[SuTo] Suggestions To** holds one command per server, all switched off after the import. Enable the ones you post to, until **Enabled** says **Yes**:
+
+| Command | Posts to |
+|---|---|
+| `[SuTo] Suggestion to Discord` | Discord |
+| `[SuTo] Suggestion to Stoat` | Stoat |
+| `[SuTo] Suggestion to GameVox` | GameVox |
+
+<p align="center"><img src="Assets/sb-commands.png" alt="The Commands page in Streamer.bot with the three SuTo commands, each answering to !suggestion and !vorschlag, all enabled" width="800"></p>
+
+All three answer to `!suggestion` and `!vorschlag`. With more than one enabled, a suggestion goes to every server, and the chat confirmation comes once per server.
+
+### 3. Add your webhook
+
+Open **Actions & Queues → Actions**, select the action (**[SuTo] ... Discord**, **... Stoat** or **... GameVox**) and double-click the **Set argument** line in the **Webhook: Send to Channel** group. Replace the placeholder in **Value** with your webhook URL and click **Ok**.
+
+<p align="center"><img src="Assets/sb-action-discord.png" alt="The Actions page in Streamer.bot with [SuTo] ... Discord selected; its sub-actions show the Webhook: Send to Channel group with the discordWebhookUrl argument, and the Suggestion Content group" width="800"></p>
+
+<p align="center"><img src="Assets/sb-set-argument.png" alt="The Set Argument window for discordWebhookUrl, with the placeholder in the Value field" width="480"></p>
+
+| Server | Argument | Where the URL comes from |
+|---|---|---|
+| Discord | `discordWebhookUrl` | Channel settings → Integrations → Webhooks → New Webhook → Copy Webhook URL |
+| Stoat | `stoatSuggestionWebhook` | The channel's webhook settings; the URL looks like `https://api.stoat.chat/webhooks/{id}/{token}` |
+| GameVox | `gameVoxWebhookUrl` | [GameVox Developer Portal](https://developers.gamevox.com/docs/webhooks) → your application → Webhooks → New Webhook. The URL is shown only once. |
 
 That is it. Type `!suggestion test` in your chat to try it.
 

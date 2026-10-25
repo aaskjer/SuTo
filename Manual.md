@@ -4,7 +4,11 @@ Every argument of the three actions, what it does and what it starts as. If you 
 
 **[Overview](README.md)** · **[Import string](Import-String.md)** · **[Changelog](https://github.com/aaskjer/SuTo/releases)** · **[Report a problem](https://github.com/aaskjer/SuTo/issues)**
 
-All settings are **Set Argument** sub-actions inside the actions **[SuTo] ... Discord**, **[SuTo] ... Stoat** and **[SuTo] ... GameVox**. Double-click one to change its value. A sub-action that is switched off (greyed out) does not count; right-click → **Enabled** switches it on.
+All settings are **Set Argument** sub-actions inside the actions **[SuTo] ... Discord**, **[SuTo] ... Stoat** and **[SuTo] ... GameVox** (**Actions & Queues → Actions** in Streamer.bot). Double-click one to change its **Value**, then **Ok**. A sub-action that is switched off (greyed out) does not count; right-click → **Enabled** switches it on.
+
+<p align="center"><img src="Assets/sb-action-discord.png" alt="The Actions page in Streamer.bot with [SuTo] ... Discord selected: the Webhook: Send to Channel group with discordWebhookUrl, and the Suggestion Content group with suggestionTemplate, showFooter, showPlatformTag and showTimestamp" width="800"></p>
+
+<p align="center"><img src="Assets/sb-set-argument.png" alt="The Set Argument window for discordWebhookUrl, with the placeholder in the Value field" width="480"></p>
 
 ---
 
