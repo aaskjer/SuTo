@@ -4,7 +4,6 @@
 
 <p align="center">
   <img alt="Supported platforms: Twitch, YouTube, Kick" src="https://img.shields.io/badge/supported_platform-Twitch%2C_YouTube%2C_Kick-white">
-  <img alt="Posts to: Discord, Stoat, GameVox" src="https://img.shields.io/badge/posts_to-Discord%2C_Stoat%2C_GameVox-5865f2">
   <img alt="tool: streamer.bot" src="https://img.shields.io/badge/tool-streamer.bot-0b73ff">
   <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow"></a>
 </p>
