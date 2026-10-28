@@ -13,7 +13,7 @@
   <img alt="GitHub stars" src="https://img.shields.io/github/stars/aaskjer/SuTo">
 </p>
 
-<p align="center"><b><a href="Manual.md">Manual</a></b> · <b><a href="Import-String.md">Import string</a></b> · <b><a href="https://github.com/aaskjer/SuTo/releases/latest">Download</a></b> · <b><a href="https://github.com/aaskjer/SuTo/issues">Report a problem</a></b></p>
+<p align="center"><b><a href="Setup-Guide.md">Setup Guide</a></b> · <b><a href="Import-String.md">Import string</a></b> · <b><a href="https://github.com/aaskjer/SuTo/releases/latest">Download</a></b> · <b><a href="https://github.com/aaskjer/SuTo/issues">Report a problem</a></b></p>
 
 ---
 
@@ -70,7 +70,7 @@ Open **Actions & Queues → Actions**, select the action (**[SuTo] ... Discord**
 
 That is it. Type `!suggestion test` in your chat to try it.
 
-Everything else (text, colours, footer, time format, Discord forums) is optional and explained in the **[Manual](Manual.md)**.
+Everything else (text, colours, footer, time format, Discord forums) is optional and explained in the **[Setup Guide](Setup-Guide.md)**.
 
 ---
 
@@ -94,7 +94,7 @@ The chat confirmation (`@user has made a suggestion!`) is sent on the platform t
 - **Webhooks are secrets.** Anyone with the URL can post to that channel. Do not show the action on stream, and create a new webhook if one leaks.
 - **GameVox webhooks only reach cloud-hosted GameVox servers.** A self-hosted server answers with "not found".
 - **Do not edit the "No Touchy!" group.** It looks up Kick avatars and runs the code.
-- **Something not posting?** Streamer.bot's log (**Logs** tab) has a line starting with `[SuTo/Discord]`, `[SuTo/Stoat]` or `[SuTo/GameVox]` that says why. The [Manual](Manual.md#when-nothing-arrives) lists the usual ones.
+- **Something not posting?** Streamer.bot's log (**Logs** tab) has a line starting with `[SuTo/Discord]`, `[SuTo/Stoat]` or `[SuTo/GameVox]` that says why. The [Setup Guide](Setup-Guide.md#when-nothing-arrives) lists the usual ones.
 
 ---
 

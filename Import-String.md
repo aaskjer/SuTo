@@ -9,4 +9,4 @@ U0JBRR+LCAAAAAAAAv/sfelyIkmW7v9rdt+BzrGy7J4u1LEvZT1tVyCxSSJT7DDZVhYrhAiWYpGExu5T
 
 ---
 
-[Manual](https://github.com/aaskjer/SuTo/blob/main/Manual.md)
+[Setup Guide](https://github.com/aaskjer/SuTo/blob/main/Setup-Guide.md)

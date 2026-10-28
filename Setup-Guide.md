@@ -1,4 +1,4 @@
-# 📝 SuTo — Manual
+# 📝 SuTo — Setup Guide
 
 Every argument of the three actions, what it does and what it starts as. If you are here to find out what SuTo is or how to install it, start on the **[overview page](README.md)**.
 
