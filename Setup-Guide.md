@@ -1,14 +1,80 @@
 # 📝 SuTo — Setup Guide
 
-Every argument of the three actions, what it does and what it starts as. If you are here to find out what SuTo is or how to install it, start on the **[overview page](README.md)**.
+How to install SuTo, then every argument of the three actions: what it does and what it starts as. What SuTo is and does is on the **[overview page](README.md)**.
 
 **[Overview](README.md)** · **[Import string](Import-String.md)** · **[Changelog](https://github.com/aaskjer/SuTo/releases)** · **[Report a problem](https://github.com/aaskjer/SuTo/issues)**
 
-All settings are **Set Argument** sub-actions inside the actions **[SuTo] ... Discord**, **[SuTo] ... Stoat** and **[SuTo] ... GameVox** (**Actions & Queues → Actions** in Streamer.bot). Double-click one to change its **Value**, then **Ok**. A sub-action that is switched off (greyed out) does not count; right-click → **Enabled** switches it on.
+---
 
-<p align="center"><img src="Assets/sb-action-discord.png" alt="The Actions page in Streamer.bot with [SuTo] ... Discord selected: the Webhook: Send to Channel group with discordWebhookUrl, and the Suggestion Content group with suggestionTemplate, showFooter, showPlatformTag and showTimestamp" width="800"></p>
+# Install
+
+### 1. Import
+
+Download **`SuggestionsTo.sb`** from the [latest release](https://github.com/aaskjer/SuTo/releases/latest), or copy the string from [Import-String.md](Import-String.md). In Streamer.bot (1.0 or newer) click **Import** and drag the file in, or paste the string. The window lists the three actions; click **Import** and answer **Yes** to the question about C# code.
+
+<p align="center"><img src="Assets/sb-import.png" alt="Streamer.bot's Import window with the SuTo string pasted in: the actions [SuTo] ... Discord, GameVox and Stoat, and the note that the import contains C# code" width="640"></p>
+
+### 2. Enable the commands
+
+Open **Commands** in Streamer.bot's menu on the left. The group **[SuTo] Suggestions To** holds one command per server, all switched off after the import. Enable the ones you post to, until **Enabled** says **Yes**:
+
+| Command | Posts to |
+|---|---|
+| `[SuTo] Suggestion to Discord` | Discord |
+| `[SuTo] Suggestion to Stoat` | Stoat |
+| `[SuTo] Suggestion to GameVox` | GameVox |
+
+<p align="center"><img src="Assets/sb-commands.png" alt="The Commands page in Streamer.bot with the three SuTo commands, each answering to !suggestion and !vorschlag, all enabled" width="800"></p>
+
+All three answer to `!suggestion` and `!vorschlag`. With more than one enabled, a suggestion goes to every server, and the chat confirmation comes once per server.
+
+### 3. Add your webhook
+
+Open **Actions & Queues → Actions**, select the action (**[SuTo] ... Discord**, **... Stoat** or **... GameVox**) and double-click the **Set argument** line in the **Webhook: Send to Channel** group. Replace the placeholder in **Value** with your webhook URL and click **Ok**.
+
+<p align="center"><img src="Assets/sb-action-discord.png" alt="The Actions page in Streamer.bot with [SuTo] ... Discord selected; its sub-actions show the Webhook: Send to Channel group with the discordWebhookUrl argument, and the Suggestion Content group" width="800"></p>
 
 <p align="center"><img src="Assets/sb-set-argument.png" alt="The Set Argument window for discordWebhookUrl, with the placeholder in the Value field" width="480"></p>
+
+| Server | Argument | Where the URL comes from |
+|---|---|---|
+| Discord | `discordWebhookUrl` | Channel settings → Integrations → Webhooks → New Webhook → Copy Webhook URL |
+| Stoat | `stoatSuggestionWebhook` | The channel's webhook settings; the URL looks like `https://api.stoat.chat/webhooks/{id}/{token}` |
+| GameVox | `gameVoxWebhookUrl` | [GameVox Developer Portal](https://developers.gamevox.com/docs/webhooks) → your application → Webhooks → New Webhook. The URL is shown only once. |
+
+That is it. Type `!suggestion test` in your chat to try it.
+
+Everything else (text, colours, footer, time format, Discord forums) is optional and explained below.
+
+---
+
+# What lands where
+
+| | Discord | Stoat | GameVox |
+|---|---|---|---|
+| Suggestion text | Embed, with Markdown | Embed, with Markdown | Embed, plain text (GameVox shows no Markdown) |
+| Colour per platform | ✅ | ✅ | ✅ |
+| Viewer's avatar | Twitch, Kick; YouTube when Streamer.bot passes one | Twitch, Kick | Twitch, Kick; YouTube when Streamer.bot passes one |
+| Name and platform | Footer | Under the text | Footer |
+| Date and time | Discord's own timestamp, in each reader's time zone | Your PC's time, in your format | Your PC's time, in your format |
+| Forum posts and threads | ✅ | — | — |
+
+The chat confirmation (`@user has made a suggestion!`) is sent on the platform the suggestion came from, and only when the post went through.
+
+---
+
+# Good to know
+
+- **Webhooks are secrets.** Anyone with the URL can post to that channel. Do not show the action on stream, and create a new webhook if one leaks.
+- **GameVox webhooks only reach cloud-hosted GameVox servers.** A self-hosted server answers with "not found".
+- **Do not edit the "No Touchy!" group.** It looks up Kick avatars and runs the code.
+- **Something not posting?** Streamer.bot's log (**Logs** tab) has a line starting with `[SuTo/Discord]`, `[SuTo/Stoat]` or `[SuTo/GameVox]` that says why. [When nothing arrives](#when-nothing-arrives) lists the usual ones.
+
+---
+
+# Settings
+
+All settings are **Set Argument** sub-actions inside the actions **[SuTo] ... Discord**, **[SuTo] ... Stoat** and **[SuTo] ... GameVox** (**Actions & Queues → Actions** in Streamer.bot). Double-click one to change its **Value**, then **Ok**. A sub-action that is switched off (greyed out) does not count; right-click → **Enabled** switches it on.
 
 ---
 
