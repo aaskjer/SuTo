@@ -131,6 +131,7 @@ The window names an invalid format before it saves.
 |---|---|---|
 | **Avatar and name under the post** | on | The viewer's avatar and name in the post's footer. |
 | **Platform after the name** | on | `(TWITCH)`, `(YOUTUBE)` or `(KICK)` after the name. |
+| **Pictures (optional)**: From Twitch, From YouTube, From Kick | empty | The web address of a fixed picture instead of the viewer's avatar, for every suggestion from that platform. Greyed out while **Avatar and name under the post** is off. |
 
 **Text** takes Discord Markdown: `**bold**`, `__underline__`, `*italic*`.
 
@@ -167,6 +168,7 @@ Use one of the two: with both filled in, the thread ID wins. A forum webhook nee
 | **Avatar and name under the post** | on | The viewer's avatar and name in the post's footer. |
 | **Platform after the name** | on | `(TWITCH)`, `(YOUTUBE)` or `(KICK)` after the name. |
 | **Time format** | `yyyy-MM-dd HH:mm` | See [Date and time](#date-and-time). |
+| **Pictures (optional)**: From Twitch, From YouTube, From Kick | empty | The web address of a fixed picture instead of the viewer's avatar, for every suggestion from that platform. Greyed out while **Avatar and name under the post** is off. |
 
 <p align="center"><img src="Assets/gamevox-example.png" alt="Two suggestions in a GameVox channel, from Twitch and from Kick, each with the viewer's avatar, name and platform under the text" width="608"></p>
 
