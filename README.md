@@ -35,21 +35,30 @@ SuTo is an import for Streamer.bot. A viewer types `!suggestion Play the new far
 chat, and a moment later the idea sits in your server: who sent it, where from and when. The viewer gets a
 short confirmation in chat. `!vorschlag` works the same way.
 
+Everything is set in one window: which servers you post to, their webhooks, the look of the post and the answer
+in chat.
+
 ## ✨ Highlights
 
 - 💬 **Three chats in.** Twitch, YouTube and Kick. The action works out by itself which platform a message
   came from.
-- 📬 **Three servers out.** One action each for Discord, Stoat and GameVox. Turn on one, two or all three.
+- 📬 **Three servers out.** Discord, Stoat and GameVox. Switch on one, two or all three.
+- ⚙️ **A settings window.** A page per server, with a button that sends a test suggestion and says whether it
+  arrived. Your settings survive every update.
 - 🎨 **A tidy post.** An embed coloured per platform, with the viewer's avatar, name, platform, date and time.
   Discord shows the time in each reader's own time zone.
 - 🧵 **Discord forums.** A new forum post for every suggestion, or all of them in one thread.
 - 📡 **Several channels at once.** Enter more than one webhook URL, separated by commas.
 - ✏️ **Your wording.** The text of the post, the colours, the footer and the chat reply are all yours to
   change.
-- ✅ **Confirmed only when it arrived.** The chat reply goes out on the platform the suggestion came from, and
-  only once the post went through.
+- ✅ **Confirmed only when it arrived.** The chat reply goes out on the platform the suggestion came from, once
+  per suggestion, and only when the post went through.
 - 🔒 **No webhook token in your logs.** When something fails, the log says what and why, with the secret part
   of the URL masked.
+
+<p align="center">
+  <img src="Assets/screenshots/discord-dark.png" alt="The Discord page of SuTo's settings window: the server is switched on, the webhook URL shows as dots, and the test suggestion arrived" width="720">
+</p>
 
 ---
 
@@ -57,6 +66,7 @@ short confirmation in chat. `!vorschlag` works the same way.
 
 - **Author:** [aaskjer on Twitch](https://twitch.tv/aaskjer) · [aaskjer.github.io](https://aaskjer.github.io/)
 - **Built for:** [Streamer.bot](https://streamer.bot) by [nate1280](https://www.patreon.com/c/nate1280/home)
+- **Settings window:** [UIFramework for streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot)
 - **Thanks:** YOU ♡
 
 Not affiliated with Streamer.bot, Twitch, YouTube, Kick, Discord, Stoat or GameVox. All names and trademarks
