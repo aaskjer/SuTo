@@ -80,7 +80,10 @@ The chat confirmation (`@user has made a suggestion!`) is sent on the platform t
 - **GameVox webhooks only reach cloud-hosted GameVox servers.** A self-hosted server answers with "not found".
 - **The commands** are in Streamer.bot's **Commands** tab, group **[SuTo] Suggestions To**: one per server, all three on `!suggestion` and `!vorschlag`. Change the command words, cooldowns and permissions there, the same for all three. Streamer.bot switches them off with every import; enable the ones you use again after an update.
 - **Leave the actions as they are.** The **No Touchy!** group looks up Kick avatars and runs the code, and **[SuTo] Settings Host** answers the settings window: do not delete or disable it, the window does not open without it. Nothing in them is a setting.
-- **A server's action that is disabled or deleted** cannot post. The window shows it: the server's page is locked, and its pill in the header reads **action off** or **action missing**. Enable the action again, or import SuTo again.
+- **A server's action that is disabled or deleted** cannot post. The window shows it within a moment, also while it is open: the server's page is greyed out, the switch at its top shows off and says why, and its pill in the header reads **action off** or **action missing**. Enable the action again, or import SuTo again; the page is back as you had it, and your settings are not touched.
+
+<p align="center"><img src="Assets/screenshots/stoat-action-off.png" alt="The Stoat page of the settings window while the action for Stoat is disabled: every field is greyed out, the switch Post suggestions to Stoat shows off with the reason under it, and the pill in the header reads Stoat: action off" width="720"></p>
+
 - **Something not posting?** The **Log** page of the window shows what SuTo wrote into Streamer.bot's log: lines starting with `[SuTo/Discord]`, `[SuTo/Stoat]` or `[SuTo/GameVox]` say why. [When nothing arrives](#when-nothing-arrives) lists the usual ones.
 
 ---
@@ -214,7 +217,7 @@ Open the **Log** page of the settings window, or Streamer.bot's **Logs** tab, an
 | `Nothing is set up yet. Run the action '[SuTo] Settings' ...` | Nothing has been saved in the settings window yet. Open it, switch on a server, save. |
 | `Discord is switched off in the settings.` (a debug line) | Switch the server on at the top of its page. |
 | nothing at all | The server's command is off in Streamer.bot's **Commands** tab, as it is after every import. Right-click it → **Enabled**. |
-| nothing at all, and the server's page in the window is locked | The server's action is disabled or deleted in Streamer.bot. The pill in the window's header says which. Enable it, or import SuTo again. |
+| nothing at all, and the server's page in the window is greyed out | The server's action is disabled or deleted in Streamer.bot. The pill in the window's header says which. Enable it, or import SuTo again. |
 | `No webhook URL is set. ...` | The server is switched on, but **Webhook URL** is empty. |
 | `... is not a webhook URL. ...` | The URL is cut off, or the field holds something else. Paste the full URL. |
 | `The forum webhook needs a thread name ... or a thread ID` | Fill in one of the two (Discord forums). |
@@ -243,4 +246,4 @@ In the Streamer.bot folder:
 | `Suggestions To\SuTo-Settings.json` | Everything the window saves, the webhook URLs included. Keep it to yourself. |
 | `Suggestions To\SuTo-Settings.json.bak` | The settings before the last save. |
 | `Suggestions To\uiframework.layout.json` | Your layout of the window: theme, language, renamed or hidden pages and fields. |
-| `UIFramework\lib\<version>\UIFramework.dll` | The window itself, [UIFramework for streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot) 2.6.0 or newer. It is not part of the import: the settings action downloads it the first time the window opens and offers the update when an older one is there. |
+| `UIFramework\lib\<version>\UIFramework.dll` | The window itself, [UIFramework for streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot) 2.7.0 or newer. It is not part of the import: the settings action downloads it the first time the window opens and offers the update when an older one is there. |
